@@ -8,6 +8,7 @@ const GameGrid = () => {
     <>
       {error && <Text>{error}</Text>}
       <SimpleGrid
+        // columns={3}
         columns={{ sm: 1, md: 2, lg: 3, xl: 5 }}
         padding="10px"
         spacing={10}
