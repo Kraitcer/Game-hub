@@ -1,6 +1,5 @@
 import useData from "./useData";
 import { Genre } from "./useGenres";
-// import { AxiosRequestConfig } from "axios";
 
 export interface Platform {
   id: number;
