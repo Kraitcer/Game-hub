@@ -11,10 +11,8 @@ export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
 }
-
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
-
   return (
     <Grid
       templateAreas={{
