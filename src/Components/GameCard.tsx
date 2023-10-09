@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Game } from "../hooks/useGames";
 import { Card, CardBody, HStack, Heading, Image, Text } from "@chakra-ui/react";
 import PlatformIconList from "./PlatformIconList";
@@ -8,6 +9,7 @@ interface Props {
   game: Game;
 }
 const GameCard = ({ game }: Props) => {
+  const navigate = useNavigate();
   return (
     <Card>
       <Image src={getCropedImageUrl(game.background_image)} />
@@ -18,7 +20,11 @@ const GameCard = ({ game }: Props) => {
           />
           <CriticScore score={game.metacritic} />
         </HStack>
-        <Heading fontSize="2xl">
+        <Heading
+          fontSize="2xl"
+          cursor={"pointer"}
+          onClick={() => navigate(`/games/${game.slug}`)}
+        >
           {game.name}
           <Emoji rating={game.rating_top} />
         </Heading>

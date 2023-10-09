@@ -12,6 +12,9 @@ export interface Game {
   parent_platforms: { platform: Platform }[];
   metacritic: number;
   rating_top: number;
+  description: string;
+  description_raw: string;
+  slug: string;
 }
 
 const useGames = () => {
