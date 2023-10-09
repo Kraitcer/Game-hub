@@ -1,6 +1,7 @@
 import { Heading, Spinner, Text } from "@chakra-ui/react";
 import { useLocation, useParams } from "react-router-dom";
-import useGames, { Game } from "../hooks/useGames";
+import useGames from "../hooks/useGames";
+import { Game } from "../entities/Game";
 import useGame from "../hooks/useGame";
 
 const GameDetalePage = () => {
