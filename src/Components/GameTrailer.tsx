@@ -1,6 +1,4 @@
-import React from "react";
 import useTrailers from "../hooks/useTrailers";
-// import useTrailers from "../hooks/useTrailers";
 
 interface Props {
   gameId: number;
@@ -8,7 +6,6 @@ interface Props {
 
 const GameTrailer = ({ gameId }: Props) => {
   const { data, isLoading, error } = useTrailers(gameId);
-  //   console.log("GameTrailer", data);
   if (isLoading) return null;
 
   if (error) throw error;
